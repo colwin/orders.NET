@@ -10,7 +10,7 @@ RUN ["dotnet", "build"]
 
 EXPOSE 80/tcp
 
-RUN [ "curl", "-LO", "https://github.com/DataDog/dd-trace-dotnet/releases/download/v1.21.1/datadog-dotnet-apm_1.21.1_amd64.deb",  "&&", "dpkg", "-i", "./datadog-dotnet-apm_1.21.1_amd64.deb"]
+RUN curl -LO https://github.com/DataDog/dd-trace-dotnet/releases/download/v1.21.1/datadog-dotnet-apm_1.21.1_amd64.deb  && dpkg -i ./datadog-dotnet-apm_1.21.1_amd64.deb
 
 ENV CORECLR_ENABLE_PROFILING=1
 ENV CORECLR_PROFILER={846F5F1C-F9AE-4B07-969E-05C26BC060D8}
