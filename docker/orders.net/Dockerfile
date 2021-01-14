@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:latest
+FROM FROM mcr.microsoft.com/dotnet:2.1
 
 COPY . /app
 
